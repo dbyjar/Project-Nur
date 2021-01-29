@@ -2,7 +2,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Admin <?= date('Y'); ?></span>
+            <span>Copyright &copy; Finsa Klinik <?= date('Y'); ?></span>
           </div>
         </div>
       </footer>
@@ -39,7 +39,6 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="<?= base_url('assets/') ?>vendor/jquery/jquery.min.js"></script>
   <script src="<?= base_url('assets/') ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
@@ -47,10 +46,13 @@
 
   <!-- Custom scripts for all pages-->
   <script src="<?= base_url('assets/') ?>js/sb-admin-2.min.js"></script>
+  <script type="text/javascript">
+    var baseurl = "<?php print base_url(); ?>";
+  </script>
+
+  <script src="<?= base_url('assets/') ?>js/config.js"></script>
 
   <!-- CK Editor -->
-  
-
   <script>
     $('.custom-file-input').on('change', function() {
       let fileName = $(this).val().split('\\').pop();
