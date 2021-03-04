@@ -12,6 +12,13 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
+		$this->db->from('customer');
+		$data['customer'] = $this->db->count_all_results();
+
+		$this->db->from('data_customer');
+		$data['data_customer'] = $this->db->count_all_results();
+
+
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		
 		$data['title'] = 'Dashboard';
